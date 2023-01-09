@@ -45,7 +45,7 @@ public class Numbers
 
 	/*print_number_pattern_2() output
 	-------------------------
-    1 
+        1 
 	2 2 
 	3 3 3 
 	4 4 4 4 
@@ -67,11 +67,11 @@ public class Numbers
 	/*print_number_pattern_3() output
 	-------------------------
 	1 2 3 4 5 
-    1 2 3 4 
-    1 2 3 
-    1 2 
-    1 
-    -------------------------*/
+        1 2 3 4 
+        1 2 3 
+        1 2 
+        1 
+        -------------------------*/
 
 	private void print_number_pattern_3()
 	{

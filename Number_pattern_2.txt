@@ -1,0 +1,226 @@
+public class Number_series
+{
+/*pattern output
+---------------------------
+1 2 3 4 5 
+* 1 2 3 4 
+* * 1 2 3 
+* * * 1 2 
+* * * * 1   
+---------------------------*/
+public void pattern()
+{
+for( int r= 1;r<=5;r++)
+{
+for( int s= 1;s<r;s++)
+{
+System.out.print("* ");
+}
+for(int c=1;c<=6-r;c++)
+{
+System.out.print(c+" ");
+}
+System.out.println();
+}
+}
+/*patternn output
+---------------------------
+1 1 1 1 1 
+* 2 2 2 2 
+* * 3 3 3 
+* * * 4 4 
+* * * * 5 
+---------------------------*/
+public void patternn()
+{
+for( int r= 1;r<=5;r++)
+{
+for( int s= 1;s<r;s++)
+{
+System.out.print("* ");
+}
+for(int c=1;c<=6-r;c++)
+{
+System.out.print(r+" ");
+}
+System.out.println();
+}
+}
+/*pattern1 output
+---------------------------
+5 4 3 2 1 
+* 5 4 3 2 
+* * 5 4 3 
+* * * 5 4 
+* * * * 5 
+---------------------------*/
+public void pattern1()
+{
+for( int r= 1;r<=5;r++)
+{
+for( int s= 1;s<r;s++)
+{
+System.out.print("* ");
+}
+for(int c=5;c>=r;c--)
+{
+System.out.print(c+" ");
+}
+System.out.println();
+}
+}
+/*patternn1 output
+---------------------------
+5 5 5 5 5 
+* 4 4 4 4 
+* * 3 3 3 
+* * * 2 2 
+* * * * 1
+--------------------------- */
+
+public void patternn1()
+{
+for( int r= 5;r>=1;r--)
+{
+for( int s= 5;s>r;s--)
+{
+System.out.print("* ");
+}
+for(int c=1;c<=r;c++)
+{
+System.out.print(r+" ");
+}
+System.out.println();
+}
+}
+/*pattern2 output
+---------------------------
+* * * * 1 
+* * * 1 2 
+* * 1 2 3 
+* 1 2 3 4 
+1 2 3 4 5 
+--------------------------- */
+
+public void pattern2()
+{
+for( int r= 1;r<=5;r++)
+{
+for( int s= 5;s>r;s--)
+{
+System.out.print("* ");
+}
+for(int c=1;c<=r;c++)
+{
+System.out.print(c+" ");
+}
+System.out.println();
+}
+}
+/*patternn2 output
+---------------------------
+* * * * 1 
+* * * 2 2 
+* * 3 3 3 
+* 4 4 4 4 
+5 5 5 5 5 
+--------------------------- */
+public void patternn2()
+{
+for( int r= 1;r<=5;r++)
+{
+for( int s= 5;s>r;s--)
+{
+System.out.print("* ");
+}
+for(int c=1;c<=r;c++)
+{
+System.out.print(r+" ");
+}
+System.out.println();
+}
+}
+/*pattern3 output
+---------------------------
+* * * * 5 
+* * * 5 4 
+* * 5 4 3 
+* 5 4 3 2 
+5 4 3 2 1 
+---------------------------*/
+public void pattern3()
+ {
+for (int r=5; r>=1;r--)
+{
+for ( int s=1;s<r;s++)
+{
+System.out.print("* ");
+}
+for ( int c=5;c>=r;c--)
+{
+System.out.print(c+" ");
+}
+System.out.println();
+}
+}
+/*patternn3 output
+---------------------------
+* * * * 5 
+* * * 4 4 
+* * 3 3 3 
+* 2 2 2 2 
+1 1 1 1 1
+--------------------------- */
+public void patternn3()
+ {
+for (int r=5; r>=1;r--)
+{
+for ( int s=1;s<r;s++)
+{
+System.out.print("* ");
+}
+for ( int c=5;c>=r;c--)
+{
+System.out.print(r+" ");
+}
+System.out.println();
+}
+}
+public static void main(String[] args)
+{
+Number_series ser= new Number_series();
+System.out.println("pattern output");
+System.out.println("---------------------------");
+ser.pattern();
+System.out.println("---------------------------");
+System.out.println("patternn output");
+System.out.println("---------------------------");
+ser.patternn();
+System.out.println("---------------------------");
+System.out.println("pattern1 output");
+System.out.println("---------------------------");
+ser.pattern1();
+System.out.println("---------------------------");
+System.out.println("patternn1 output");
+System.out.println("---------------------------");
+ser.patternn1();
+System.out.println("---------------------------");
+System.out.println("pattern2 output");
+System.out.println("---------------------------");
+ser.pattern2();
+System.out.println("---------------------------");
+System.out.println("patternn2 output");
+System.out.println("---------------------------");
+ser.patternn2();
+System.out.println("---------------------------");
+System.out.println("pattern3 output");
+System.out.println("---------------------------");
+ser.pattern3();
+System.out.println("---------------------------");
+System.out.println("patternn3 output");
+System.out.println("---------------------------");
+ser.patternn3();
+System.out.println("---------------------------");
+
+}
+}

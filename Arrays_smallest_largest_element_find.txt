@@ -1,0 +1,90 @@
+import java.util.Arrays;
+class Arrays1
+{//TO FIND SMALLEST NUMBER IN A GIVEN ARRAY
+public void find_smallest()
+{
+int a[]={3,7,-8,-5,-7,-1,9};
+int small=a[0];
+for(int i=1;i<a.length;i++)
+{
+if(a[i]<small)
+{
+small=a[i];
+}
+}
+System.out.println("Smallest number in the given array is "+small);
+}
+//TO FIND SMALLEST NUMBER IN A GIVEN ARRAY USING WRAPPER CLASS
+public void find_smallest_wrapper()
+{
+int a[]={3,7,-8,-5,-7,-1,9};
+int small=Integer.MAX_VALUE;
+for(int i=1;i<a.length;i++)
+{
+if(a[i]<small)
+{
+small=a[i];
+}
+}
+System.out.println("Smallest number in the given array (using Integer class) is "+small);
+}
+//TO FIND LARGEST NUMBER IN A GIVEN ARRAY
+public void find_largest()
+{
+int a[]={3,7,-8,-5,-7,-1,9};
+int large=a[0];
+for(int i=1;i<a.length;i++)
+{
+if(a[i]>large)
+{
+large=a[i];
+}
+}
+System.out.println("Largest number in the given array is "+large);
+}
+//TO FIND LARGEST NUMBER IN A GIVEN ARRAY USING WRAPPER CLASS
+public void find_largest_wrapper()
+{
+int a[]={3,7,-8,-5,-7,-1,9};
+int large=Integer.MIN_VALUE;
+for(int i=1;i<a.length;i++)
+{
+if(a[i]>large)
+{
+large=a[i];
+}
+}
+System.out.println("Largest number in the given array (using Integer class) is "+large);
+}
+//We can convert a String to Integer using the parseInt() method of the Integer class. 
+//To convert a string array to an integer array,convert each element of it to integer using Parse(breaking the given string)and populate the integer array with them.
+public void convert_String_to_Integer()
+{
+String str[]={"567","3476","1786","345"};
+int a[]=new int[str.length];
+for(int i=0;i<str.length;i++)
+{
+a[i]=Integer.parseInt(str[i]);
+
+}
+System.out.println(Arrays.toString(a));
+}
+
+public static void main(String[] args)
+{
+Arrays1 arr_obj=new Arrays1();
+arr_obj.find_smallest();
+arr_obj.find_largest();
+arr_obj.find_smallest_wrapper();
+arr_obj.find_largest_wrapper();
+arr_obj.convert_String_to_Integer();
+}
+}
+
+OUTPUT
+Smallest number in the given array is -8
+Largest number in the given array is 9
+Smallest number in the given array (using Integer class) is -8
+Largest number in the given array (using Integer class) is 9
+[567, 3476, 1786, 345]
+

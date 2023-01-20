@@ -1,0 +1,132 @@
+class ArrayPrograms
+{
+//FINDING SUM OF ODD ELEMENT VALUE
+public void find_odd_elements_value_sum(int[] arr)
+{
+int total=0;
+for(int i=0;i<arr.length;i++)
+{
+if(arr[i]%2!=0)
+{
+total=total+arr[i];
+System.out.println("Odd Elements values in the given array is "+arr[i]);
+}
+}
+System.out.println("Total of Odd Elements value is "+total);
+}
+/*OUTPUT
+Odd Elements values in the given array is 5
+Odd Elements values in the given array is 3
+Odd Elements values in the given array is 1
+Odd Elements values in the given array is 7
+Total of Odd Elements value is 16
+*/
+//FINDING SUM OF EVEN ELEMENT VALUE
+public void find_even_elements_value_sum(int[] arr)
+{
+int total=0;
+for(int i=0;i<arr.length;i++)
+{
+if(arr[i]%2==0)
+{
+total=total+arr[i];
+System.out.println("Even Elements values in the given array is "+arr[i]);
+}
+}
+System.out.println("Total of Odd Elements value is "+total);
+}
+/*OUTPUT
+Even Elements values in the given array is 6
+Even Elements values in the given array is 4
+Even Elements values in the given array is 8
+Even Elements values in the given array is 2
+Even Elements values in the given array is 2
+Total of Odd Elements value is 22
+*/
+//FIND SUM OF ODD INDEX VALUE
+public void find_odd_index_sum(int[] arr)//passing array as argument
+{
+int sum=0;
+for(int i=1;i<arr.length;i+=2)//int starting from index 1 since we need odd index value
+{
+sum=sum+arr[i];
+System.out.println("Elements of odd index are "+arr[i]);
+}
+System.out.println("Sum of odd index value is "+sum);
+}
+/*OUTPUT
+Elements of odd index are 5
+Elements of odd index are 3
+Elements of odd index are 7
+Elements of odd index are 2
+Sum of odd index value is 17
+*/
+//FIND SUM OF EVEN INDEX VALUE
+public void find_even_index_sum(int[] arr)//passing array as argument
+{
+int sum=0;
+for(int i=0;i<arr.length;i+=2)
+{
+sum=sum+arr[i];
+System.out.println("Elements of Even index are "+arr[i]);
+}
+System.out.println("Sum of Even index value is "+sum);
+}
+/*OUTPUT
+Elements of Even index are 6
+Elements of Even index are 4
+Elements of Even index are 1
+Elements of Even index are 8
+Elements of Even index are 2
+Sum of Even index value is 21
+*/
+//FINDING SUM OF ODD VALUES IN ONLY OF ODD INDEX ELEMENTS
+public void sum_odd_valuesOf_odd_index(int[] arr)
+{int addition=0;
+for(int i=1;i<arr.length;i+=2)
+{
+if(arr[i]%2!=0)
+{
+addition=addition+arr[i];
+System.out.println("Odd value elements from odd indexes are "+arr[i]);
+}
+}
+System.out.println("Addition of Odd value elements from odd indexes are "+addition);
+}
+/*OUTPUT
+Odd value elements from odd indexes are 5
+Odd value elements from odd indexes are 3
+Odd value elements from odd indexes are 7
+Addition of Odd value elements from odd indexes are 15*/
+//FINDING SUM OF EVEN VALUES ONLY FROM EVEN INDEX
+public void sum_even_valuesOf_even_index(int[] arr)
+{int addition=0;
+for(int i=0;i<arr.length;i+=2)
+{
+if(arr[i]%2==0)
+{
+addition=addition+arr[i];
+System.out.println("Even value elements from even indexes are "+arr[i]);
+}
+}
+System.out.println("Addition of Even value elements from even indexes are "+addition);
+}
+/*OUTPUT
+Even value elements from even indexes are 6
+Even value elements from even indexes are 4
+Even value elements from even indexes are 8
+Even value elements from even indexes are 2
+Addition of Even value elements from even indexes are 20
+*/
+public static void main(String[] args)  
+{
+ArrayPrograms array=new ArrayPrograms();
+int arr[]={6,5,4,3,1,7,8,2,2};
+array.find_odd_elements_value_sum(arr);//passing array value
+array.find_odd_index_sum(arr);
+array.sum_odd_valuesOf_odd_index(arr);
+array.find_even_elements_value_sum(arr);
+array.find_even_index_sum(arr);
+array.sum_even_valuesOf_even_index(arr);
+}
+}

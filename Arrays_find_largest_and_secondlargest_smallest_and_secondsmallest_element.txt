@@ -1,0 +1,58 @@
+import java.util.Arrays;
+//PROGRAM TO FIND LARGEST AND SECOND LARGEST NUMBER IN GIVEN ARRAY
+class Array_Programs
+{
+public void find_second_largest()
+{
+int a[]={-2,99,4,5,89,90};
+int max=Integer.MIN_VALUE,sec_max=Integer.MIN_VALUE;
+for(int i=0;i<a.length;i++)
+{
+if(a[i]>max)//or if(max<a[i])
+{
+sec_max=max;
+max=a[i];
+}
+else if(a[i]>sec_max)
+{ sec_max=a[i];
+}
+}
+System.out.println("maximum no is "+max);
+System.out.println("second maximum no is "+sec_max);
+}
+/*OUPUT
+maximum no is 99
+second maximum no is 90
+*/
+//PROGRAM TO FIND SMALLEST AND SECOND SMALLEST NUMBER IN GIVEN ARRAY
+public void find_second_smallest()
+{
+int a[]={99,-78,67,89,90};
+int min=Integer.MAX_VALUE,sec_min=Integer.MAX_VALUE;
+for(int i=0;i<a.length;i++)
+{
+if(a[i]<min)
+{
+sec_min=min;
+min=a[i];
+}
+else if(a[i]<sec_min)
+{ sec_min=a[i];
+}
+}
+System.out.println("minimum no is "+min);
+System.out.println("second minimum no is "+sec_min);
+}
+/*OUPUT
+minimum no is -78
+second minimum no is 67
+*/
+public static void main(String[] args)
+{
+Array_Programs array=new Array_Programs();
+array.find_second_largest();
+array.find_second_smallest();
+}
+}
+
+

@@ -1,0 +1,124 @@
+class Shift_array
+{//SINGLE TIME LEFT SHIFT/ROTATE AN ARRAY ELEMENT
+public void left_shift(int[] arr)
+{
+System.out.println("Original array is ");
+for(int i=0;i<arr.length;i++)
+{System.out.print(arr[i]+" ");
+}
+int temp=arr[0];
+for(int i=0;i<arr.length-1;i++)
+{
+arr[i]=arr[i+1];
+}
+arr[arr.length-1]=temp;
+System.out.println("\nLeft shifted array elements");
+for(int i=0;i<arr.length;i++)
+{
+System.out.print(arr[i]+" ");
+}
+}
+//TWICE LEFT SHIFT/ROTATE AN ARRAY ELEMENT
+public void left_shift_twice(int[] arr)
+{
+int temp=arr[0];
+int temp1=arr[1];
+for(int i=0;i<arr.length-2;i++)
+{
+arr[i]=arr[i+2];
+}
+arr[arr.length-2]=temp;
+arr[arr.length-1]=temp1;
+System.out.println("\nTWice Left shifted array elements");
+for(int i=0;i<arr.length;i++)
+{
+System.out.print(arr[i]+" ");
+}
+}
+/*OUTPUT
+Left shifted array elements
+5 9 4 -1 0 -3 7 
+TWice Left shifted array elements
+4 -1 0 -3 7 5 9 
+*/
+//SINGLE TIME RIGHT SHIFT/ROTATE AN ARRAY ELEMENT
+public void right_shift()
+{int arr[]={7,5,9,4,-1,0,-3};
+System.out.println();
+System.out.println("Original array is ");
+for(int i=0;i<arr.length;i++)
+{
+System.out.print(arr[i]+" ");
+}
+int temp=arr[arr.length-1];
+for(int i=arr.length-1;i>0;i--)
+{
+arr[i]=arr[i-1];
+}
+arr[0]=temp;
+System.out.println("\nRight shifted array elements");
+for(int i=0;i<arr.length;i++)
+{
+System.out.print(arr[i]+" ");
+}
+}
+/*OUTPUT
+Right shifted array elements
+-3 7 5 9 4 -1 0 
+*/
+
+//TWICE RIGHT SHIFT/ROTATE AN ARRAY ELEMENT
+public void right_shift_twice()
+{int arr[]={7,5,9,4,-1,0,-3};//int j=arr.length-1;
+int temp=arr[arr.length-2];//int temp=arr[j-1];
+int temp1=arr[arr.length-1];//int temp1=arr[j];
+for(int i=arr.length-1;i>1;i--)//for(int i=j;i>1;i--)
+{                              //{
+arr[i]=arr[i-2];               //arr[i]=arr[i-2];  
+}                              //}
+arr[0]=temp;
+arr[1]=temp1;
+System.out.println("\nTwice Right shifted array elements");
+for(int i=0;i<arr.length;i++)
+{
+System.out.print(arr[i]+" ");
+}
+}
+/*OUTPUT
+Twice Right shifted array elements
+0 -3 7 5 9 4 -1 
+*/
+
+/* Introducing variable j by replacing arr.length-1.The output will be same as above.
+public void right_shift_twice()
+{int arr[]={7,5,9,4,-1,0,-3};
+int j=arr.length-1;        
+int temp=arr[j-1];      
+int temp1=arr[j];       
+for(int i=j;i>1;i--)
+{                              
+arr[i]=arr[i-2];               
+}
+arr[0]=temp;
+arr[1]=temp1;
+System.out.println("\nTwice Right shifted array elements");
+for(int i=0;i<arr.length;i++)
+{
+System.out.print(arr[i]+" ");
+}
+}
+OUTPUT
+Twice Right shifted array elements
+0 -3 7 5 9 4 -1 
+*/
+
+public static void main(String[] args)
+{int arr[]={7,5,9,4,-1,0,-3};
+Shift_array array=new Shift_array();
+array.left_shift(arr);
+array.left_shift_twice(arr);
+array.right_shift();
+array.right_shift_twice();
+}
+}
+

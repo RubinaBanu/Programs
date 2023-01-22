@@ -1,0 +1,125 @@
+class Array_add
+{
+//ADDITION OF TWO INTEGER ARRAY OF SAME ARRAY SIZE
+public void add()
+{
+int a[]={4,5,6,7,8,0};
+int b[]={8,3,1,6,4,2};
+for(int i=0;i<a.length;i++)
+{
+int add_result=a[i]+b[i];
+System.out.println("The added elements are "+add_result);
+}
+}
+
+//ADDITION OF TWO INTEGER ARRAY BY STORING RESULT USING ANOTHER ARRAY
+public void add1()
+{
+int a[]={4,5,6,7,8,0};
+int b[]={8,3,1,6,4,2};
+int add_result[]=new int[a.length];
+System.out.println("\nAddition of two integer array by storing result using another array");
+for(int i=0;i<a.length;i++)
+{
+add_result[i]=a[i]+b[i];
+}
+for(int i=0;i<add_result.length;i++)
+{
+System.out.print(add_result[i]+ " ");
+}
+}
+/*OUTPUT
+Addition of two integer array by storing result using another array
+12 8 7 13 12 2 
+*/
+
+//ADDITION OF TWO INTEGER ARRAY OF DIFFERENT LENGTH(first arr is of greater length)
+public void add2()
+{
+int a[]={4,5,6,7,8,0,7,8};
+int b[]={8,3,1,6,4,2,8};
+int large=a.length>b.length?a.length:b.length;
+int small=a.length<b.length?a.length:b.length;
+int add_result[]=new int[large];
+int i;
+for(i=0;i<small;i++)
+{
+add_result[i]=a[i]+b[i];
+}
+add_result[i]=a[i];
+System.out.println("\nThe added elements are");
+for(i=0;i<add_result.length;i++)
+{
+System.out.print(add_result[i]+ " ");
+}
+}
+/*OUTPUT
+The added elements are
+12 8 7 13 12 2 15 8
+*/
+
+//ADDITION OF TWO INTEGER ARRAY OF DIFFERENT LENGTH(second arr is of greater length)
+public void add3()
+{
+int a[]={4,5,6,7,8,0,7,8};
+int b[]={ 8,3,1,6,4,2,8,9,3};
+int large=a.length>b.length?a.length:b.length;
+int small=a.length<b.length?a.length:b.length;
+int add_result[]=new int[large];
+int i;
+for(i=0;i<small;i++)
+{
+add_result[i]=a[i]+b[i];
+}
+add_result[i]=b[i];
+System.out.println("\nThe added elements are");
+for(i=0;i<add_result.length;i++)
+{
+System.out.print(add_result[i]+ " ");
+}
+System.out.println();
+}
+/*OUTPUT
+The added elements are
+12 8 7 13 12 2 15 17 3
+*/
+
+//MERGE OR CONCAT TWO ARRAYS 
+public void merge_array()
+{
+int a[]={1,2,3,4};
+int b[]={5,6,7,8};
+int add_result[]=new int[a.length+b.length];
+System.out.println("Concatenated or merged elements are");
+int j=0;
+for(int i=0;i<add_result.length;i++)
+{
+if(i<a.length)
+{
+add_result[i]=a[i];
+System.out.print(add_result[i]+ " ");
+}
+else
+{
+add_result[i]=b[j];
+j++;
+System.out.print(add_result[i]+ " ");
+}
+}
+}
+/*OUTPUT
+Concatenated or merged elements are
+1 2 3 4 5 6 7 8
+*/
+
+ 
+public static void main(String[] args)
+{
+Array_add array=new Array_add();
+array.add();
+array.add1();
+array.add2();
+array.add3();
+array.merge_array();
+}
+}

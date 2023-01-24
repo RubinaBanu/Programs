@@ -1,0 +1,54 @@
+//Split an array -one to store only odd numbers and another to store only even numbers
+class SplitArray_Odd_Even
+{
+public void split_array_odd_even(int []a)
+{int odd_a[]=new int[a.length];//created new array to store odd numbers
+int even_a[]=new int[a.length];//created new array to store even numbers
+int j=0;
+int k=0;
+int i;
+for( i=0;i<a.length;i++)
+{
+if(a[i]%2==0)
+{
+even_a[j]=a[i];
+j++;
+}
+else
+{
+odd_a[k]=a[i];
+k++;
+}
+}
+System.out.println("The elements of odd array are");
+for(i=0;i<j;i++)
+{
+System.out.println(odd_a[i]);
+}
+System.out.println("The elements of even array are");
+for(i=0;i<k;i++)
+{
+System.out.println(even_a[i]);
+}
+}
+/*OUTPUT
+The elements of odd array are
+5
+3
+1
+7
+The elements of even array are
+6
+4
+8
+2
+0
+*/
+
+public static void main(String[] args)
+{
+SplitArray_Odd_Even array=new SplitArray_Odd_Even();
+int arr[]={6,5,4,3,1,7,8,9,2};
+array.split_array_odd_even(arr);//passing array value
+}
+}

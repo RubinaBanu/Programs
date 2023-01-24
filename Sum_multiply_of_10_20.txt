@@ -1,0 +1,55 @@
+//sum of 2 elements in a single array corresponding to 10
+class Sum_of_10
+{
+public void sum_of_10()
+{
+int a[]={2,6,5,4,2,5,5,6};
+System.out.println("Sum of 2 elements in a single array corresponding to 10 are");
+for(int i=0;i<a.length-1;i++)
+{
+for(int j=i+1;j<a.length;j++)
+{
+if(a[i]+a[j]==10)
+{
+System.out.println(a[i]+" "+a[j]);
+}
+}
+}
+}
+/*OUTPUT
+Sum of 2 elements in a single array corresponding to 10 are
+6 4
+5 5
+5 5
+4 6
+5 5
+*/
+//MULTIPLY any 2 elements in a single array corresponding to 20
+public void multiply_of_10()
+{
+int a[]={2,6,5,4,2,5,5,6};
+System.out.println("Multiply of 2 elements in a single array corresponding to 20 are");
+for(int i=0;i<a.length-1;i++)
+{
+for(int j=i+1;j<a.length;j++)
+{
+if(a[i]*a[j]==20)
+{
+System.out.println(a[i]+" "+a[j]);
+}
+}
+}
+}
+/*OUTPUT
+Multiply of 2 elements in a single array corresponding to 20 are
+5 4
+4 5
+4 5
+*/
+public static void main(String[] args)
+{
+Sum_of_10 array=new Sum_of_10();
+array.sum_of_10();
+array.multiply_of_10();
+}
+}

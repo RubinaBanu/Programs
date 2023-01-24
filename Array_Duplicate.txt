@@ -1,0 +1,193 @@
+class Duplicate
+{
+//duplicate array element find and print it count-METHOD 1
+private void duplicate()
+{
+int a[]={1,2,3,4,5,5,5};
+int count=0;
+for(int i=0;i<a.length-1;i++)
+{
+for(int j=i+1;j<a.length;j++)
+{
+if(a[i]==a[j])
+{
+count++;//only we are finding the count of duplicate elements
+break;
+}
+}
+}
+System.out.println("count is "+count);
+}
+
+//SAME AS METHOD OF 1 BUT WITH LITTLE CHANGES IN FOR LOOP DECLARATION
+private void duplicate1()
+{
+int a[]={1,2,3,4,5,5,5};
+System.out.println("Duplicated elements are");
+int count=0;
+for(int i=0,j=i+1;i<a.length-1 && j<a.length;i++,j++)
+{
+if(a[i]==a[j])
+{
+System.out.println(a[i]+ " ");
+count++;
+}
+}
+System.out.println("count of duplicate element is "+count);
+}
+
+//SAME AS METHOD OF 1 BUT WITH LITTLE CHANGES IN FOR LOOP DECLARATION
+private void duplicate2()
+{
+int a[]={1,2,3,4,5,5,5};
+System.out.println("Duplicated elements are");
+int count=0;
+int i=0,j=i+1;
+for(;i<a.length-1 && j<a.length;i++,j++)
+
+{
+if(a[i]==a[j])
+{count++;
+System.out.println(a[i]+ " ");
+}
+}
+System.out.println("count of duplicate element is "+count);
+}
+
+//Program to find the first non repeated element in array
+private void non_repeated_element()
+{
+int a[]={3,3,0,5,5,5};
+int count[]=new int[a.length];
+for(int i=0;i<a.length;i++)
+{count[i]=0;
+for(int j=0;j<a.length;j++)
+{
+if((i!=j) && a[i]==a[j])
+{
+count[i]++;
+}
+}
+}
+for(int i=0;i<a.length;i++)
+{
+if(count[i]==0)
+{
+System.out.println("First Non Repeated element is "+a[i]);
+break;
+}
+}
+}
+/*OUTPUT
+First Non Repeated element is 0
+*/
+
+
+//REMOVE THE DUPLICATE ELEMENT IN A GIVEN ARRAY WHEN IT IS A SORTED ARRAY
+public void remove_duplicate_element_sorted_array()
+{int a[]={1,2,2,3,3,3,4,5,5};
+int n=a.length;
+int j=0;
+for(int i=0;i<n-1;i++)
+{
+if(a[i]!=a[i+1])
+{
+a[j++]=a[i];
+}
+}
+a[j++]=a[n-1];
+System.out.println("After removing duplicate element");
+for(int k=0;k<j;k++)
+{
+System.out.print(a[k]+" ");
+}
+}
+/*OUTPUT
+After removing duplicate element 1 2 3 4 5
+*/
+
+//REMOVE THE DUPLICATE ELEMENT IN A GIVEN ARRAY
+public void remove_duplicate_element(int a[],int n)
+{
+int i,j,count;
+System.out.print("After removing duplicate elements,the array elements are ");
+for(i=0;i<n;i++)
+{ count=0;
+for(j=i+1;j<n;j++)
+{
+if(a[i]==a[j])
+{
+count++;
+}
+}
+if(count==0)
+{
+System.out.print(a[i]+" ");
+}
+}
+}
+/*OUTPUT
+After removing duplicate elements,the array elements are 1 2 3 4 5 6 8 7
+*/
+
+//PRINT ALL THE REPEATED/DUPLICATE ELEMENT IN GIVEN ARRAY
+public void all_repeated_element()
+{
+char arr[]={'E','R','T','Y','E','r','R','T','y'};
+//int arr[]={1,2,3,4,5,5,5};
+System.out.println("All the repeated element presented in the array are");
+for(int i=0;i<arr.length-1;i++)
+{
+for(int j=i+1;j<arr.length;j++)
+{
+if(arr[i]==arr[j])
+{
+System.out.println(arr[i]);
+break;
+}
+}
+}
+}
+/*OUTPUT
+All the repeated element presented in the array are
+E
+R
+T
+*/
+
+//PRINT THE FIRST REPEATED/DUPLICATE ELEMENT IN GIVEN ARRAY
+public void first_repeated_element()
+{
+char arr[]={'E','R','T','Y','F','D','R','T'};
+label : for(int i=0;i<arr.length-1;i++)
+{
+for(int j=i+1;j<arr.length;j++)
+{
+if(arr[i]==arr[j])
+{
+System.out.println("The first repeated element is "+ arr[i]);
+break label;
+}
+}
+}
+}
+/*OUTPUT
+The first repeated element is R
+*/
+
+public static void main(String[] args)
+{
+Duplicate a=new Duplicate();
+int array[]={1,2,7,3,4,4,5,6,8,7};
+int n=array.length;
+//a.duplicate();
+a.duplicate1();
+//a.duplicate2();
+a.all_repeated_element();
+a.first_repeated_element();
+a.non_repeated_element();
+a.remove_duplicate_element(array,n);
+a.remove_duplicate_element_sorted_array();
+
+}
+}

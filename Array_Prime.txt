@@ -1,0 +1,38 @@
+
+//program to find the prime number in the given array 
+//prime number : A number that is not divisible by any other in between numbers apart from one and the same number is called a prime number.
+
+class Prime_number
+{
+public void find_prime()
+{
+int a[]={5,2,99,43,76,67,23,98,56};
+for(int i=0;i<a.length;i++)
+{
+boolean prime_count=true;
+for(int j=2;j<a[i];j++)
+{
+if(a[i]%j==0)
+{prime_count=false;
+break;
+}
+}
+if(prime_count)
+System.out.println("The prime number in given array is "+a[i]);
+}
+}
+/*OUTPUT
+The prime number in given array is 5
+The prime number in given array is 2
+The prime number in given array is 43
+The prime number in given array is 67
+The prime number in given array is 23
+*/
+
+public static void main(String[] args)
+{
+Prime_number array=new Prime_number();
+array.find_prime();
+}
+}
+

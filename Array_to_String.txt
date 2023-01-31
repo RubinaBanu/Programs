@@ -1,0 +1,19 @@
+import java.util.Arrays;
+//simplest way to print the array as string.
+//or convert an array to strings in java
+
+
+public class Strings {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] stringArray= {"My","name","is","Rubina","!"};//Array consists of string as its array element
+        String s1=convert_arr_to_str(stringArray);
+        System.out.println("Converted array to string using Arrays.toString(): "+s1);
+	}
+
+	public static String convert_arr_to_str(String[] stringArray) {
+		// TODO Auto-generated method stub
+		return Arrays.toString(stringArray);
+	}
+}

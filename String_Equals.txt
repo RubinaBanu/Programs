@@ -1,0 +1,12 @@
+class Strings 
+{
+public static void main(String[] args) 
+{
+	
+        
+        String firstString="My Name";
+        String secondString="my name";
+        System.out.println("Checking using equals() method: "+firstString.equals(secondString));
+        System.out.println("Checking using equalsIgnoreCase() method: "+firstString.equalsIgnoreCase(secondString));
+}
+}

@@ -1,0 +1,195 @@
+import java.io.*;
+public class Pyramid
+{
+/*printTriangle Output
+-----------------------
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+-----------------------*/
+public static void printTriangle(int n)
+{
+for (int i=0; i<n; i++)
+{
+for (int j=n-i; j>1; j--)
+{
+System.out.print(" ");
+}
+for (int j=0; j<=i; j++ )
+{
+System.out.print("* ");
+}
+System.out.println();
+}
+}
+
+/*printReverseTriangle Output
+------------------------------
+  1 2 3 4 5 6 
+   2 3 4 5 6 
+    3 4 5 6 
+     4 5 6 
+      5 6 
+       6 
+------------------------------*/
+
+public static void printReverseTriangle()
+{
+for(int i= 1;i<=6;i++  )
+{
+for(int j= 1;j <i;j++  )
+{
+System.out.print(" ");
+}
+for(int j=i;j<=6;j++  )
+{
+System.out.print(j+" ");
+}
+System.out.println();
+}
+}
+
+/* printReverseTriangle OUTPUT
+--------------------------------
+       6
+      5 6 
+     4 5 6 
+    3 4 5 6 
+   2 3 4 5 6 
+  1 2 3 4 5 6 
+
+---------------------------------*/
+public static void printmirrorimagepattern()
+{
+for (int i = 1; i<7;i++)
+{
+for (int j = 7 ; j >i; j--)
+{
+System.out.print(" ");
+}
+for (int j =7-i ; j<7 ; j++)
+{
+System.out.print(j+" ");
+}
+System.out.println();
+}
+}
+
+
+/*printmirrorimagepattern() OUTPUT
+-----------------------------------
+      6 
+     5 6 
+    4 5 6 
+   3 4 5 6 
+  2 3 4 5 6 
+ 1 2 3 4 5 6
+-----------------------------------*/
+public static void pyramid_up_down_pattern()
+{
+for(int i= 1;i<=6;i++  )
+{
+for(int j= 1;j <i;j++  )
+{
+System.out.print(" ");
+}
+for(int j=i;j<=6;j++  )
+{
+System.out.print(j+" ");
+}
+System.out.println();
+}
+
+
+for (int i = 1; i<6;i++)
+{
+for (int j = 6 ; j >i+1; j--)
+{
+System.out.print(" ");
+}
+for (int j =6-i ; j<7 ; j++)
+{
+System.out.print(j+" ");
+}
+System.out.println();
+}
+}
+/*pyramid_up_down_pattern() output
+----------------------------------
+1 2 3 4 5 6 
+ 2 3 4 5 6 
+  3 4 5 6 
+   4 5 6 
+    5 6 
+     6 
+    5 6 
+   4 5 6 
+  3 4 5 6 
+ 2 3 4 5 6 
+1 2 3 4 5 6 
+---------------------------------*/
+//different code
+public static void printmirrorimagepattern(int rows)
+{		
+//Printing the pattern
+for (int i = 1; i <= rows; i++)
+{
+for (int j = 1; j < i; j++)
+{
+System.out.print(" ");
+}
+for (int j = i; j <= rows; j++)
+{
+System.out.print(j+" ");
+}
+System.out.println();
+}
+		
+//Printing the reverse pattern
+for (int i = rows-1; i >= 1; i--)
+{
+for (int j = 1; j < i; j++)
+{
+System.out.print(" ");
+}
+for (int j = i; j <= rows; j++)
+{
+System.out.print(j+" ");
+}
+System.out.println();
+}
+}
+/*printmirrorimagepattern output
+--------------------------------
+1 2 3 4 5 6 7 
+ 2 3 4 5 6 7 
+  3 4 5 6 7 
+   4 5 6 7 
+    5 6 7 
+     6 7 
+      7 
+     6 7 
+    5 6 7 
+   4 5 6 7 
+  3 4 5 6 7 
+ 2 3 4 5 6 7 
+1 2 3 4 5 6 7 
+--------------------------------*/
+
+public static void main(String args[])
+{
+int n = 5,rows = 7;
+printTriangle(n);
+System.out.println();
+printReverseTriangle();
+System.out.println();
+printmirrorimagepattern();
+System.out.println();
+pyramid_up_down_pattern();
+System.out.println();
+printmirrorimagepattern(rows);
+}
+}
+
